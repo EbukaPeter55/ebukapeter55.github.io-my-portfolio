@@ -365,6 +365,11 @@ section {
   left: calc(50% - 20px);
 }
 
+.section-title p[data="resume_description"]{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .section-title p {
   margin-bottom: 0;
 }
