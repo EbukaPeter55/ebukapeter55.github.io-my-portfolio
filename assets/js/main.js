@@ -1,5 +1,5 @@
 /**
-* Template Name: MyResume - v2.2.1
+* Template Name: MyResume - v2.1.0
 * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -24,8 +24,8 @@
       strings: typed_strings,
       loop: true,
       typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
+      backSpeed: 80,
+      backDelay: 5000
     });
   }
 
@@ -86,7 +86,7 @@
 
   // Navigation active state on scroll
   var nav_sections = $('section');
-  var main_nav = $('.nav-menu, #mobile-nav');
+  var main_nav = $('.nav-menu, .mobile-nav');
 
   $(window).on('scroll', function() {
     var cur_pos = $(this).scrollTop() + 300;
@@ -145,6 +145,9 @@
       once: true
     });
   }
+  $(window).on('load', function() {
+    aos_init();
+  });
 
   // Porfolio isotope and filter
   $(window).on('load', function() {
@@ -187,5 +190,11 @@
     loop: true,
     items: 1
   });
+
+  // Update copyright year
+  const copyrightYear = document.getElementById('copyright-year');
+  if (copyrightYear) {
+    copyrightYear.textContent = new Date().getFullYear();
+  }
 
 })(jQuery);
